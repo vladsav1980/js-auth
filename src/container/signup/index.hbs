@@ -23,6 +23,12 @@
                 <span name="password" class="form__error">Error</span>
             </div>
             <div class="form__item">
+                {{>field-password placeholder="Repeat your password" action="signupForm.change" label="Password again"
+                type="password"
+                name="passwordAgain"}}
+                <span name="passwordAgain" class="form__error">Error</span>
+            </div>
+            <div class="form__item">
                 {{>field-select placeholder="Choose your role" action="signupForm.change" label="Role" list=data.role
                 type="select"
                 name="role"}}
@@ -35,8 +41,8 @@
             </div>
         </div>
 
-        <button onclick="signupForm.submit()" class="button" type="button">Register</button>
-        <span class="alert alert--error">Attention, error!</span>
+        <button onclick="signupForm.submit()" class="button button--disabled" type="button">Register</button>
+        <span class="alert alert--disabled">Attention, error!</span>
     </form>
 </div>
 
